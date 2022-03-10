@@ -57,7 +57,7 @@ const populations = [8175133, 3792621, 2695598, 2100263];
 */
 
 // CODE HERE
-const totalPopulation = populations.reduce((a, c) => {a + c})
+const totalPopulation = populations.reduce((a, c) => a + c)
 
 
 
@@ -82,7 +82,7 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 */
 
 // CODE HERE
-const myStrongest = monstersInYourPocket.filter(element => element > 200)
+const myStrongest = monstersInYourPocket.filter(monster => monster.CP > 200)
 
 
 
@@ -100,7 +100,7 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
 */
 
 // CODE HERE
-
+const orderTotals = orders.map(order => order.price + (order.price * order.tax))
 
 
 ////////// PROBLEM 6 //////////
@@ -120,3 +120,6 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 */
 
 // CODE HERE
+const bobsTotal = purchases
+.filter(purchase => purchase.owner === 'Bob')
+.reduce((a, c) => a + c.price, 0)
